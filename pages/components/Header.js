@@ -291,7 +291,7 @@ export default function Header() {
                         Settings
                       </Link>
                     </li>
-                    
+
                   </ul>
                 </nav>
 
@@ -339,17 +339,22 @@ export default function Header() {
                           </Link>
                         </li>
                         <li>
-                          <Link onClick={toggleMobileNav} className={pathname === '/brand' ? active : inActive} href="/brand">
+                          <Link onClick={toggleMobileNav} className={pathname === '/branded' ? active : inActive} href="/branded">
                             Brand
                           </Link>
                         </li>
-                        
+                        <li>
+                          <Link onClick={toggleMobileNav} className={pathname === '/satuan-produk' ? active : inActive} href="/satuan-produk">
+                            Satuan
+                          </Link>
+                        </li>
+
                         <li>
                           <Link onClick={toggleMobileNav} className={pathname === '/settings' ? active : inActive} href="/settings">
                             Settings
                           </Link>
                         </li>
-                        
+
                       </ul>
                     </div>
                   )}
