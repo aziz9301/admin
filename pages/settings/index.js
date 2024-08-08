@@ -47,7 +47,7 @@ export default function Settings() {
                                 <p className="mt-3 text-md leading-6 text-gray-600">You are one of the administrators of this dashboard.</p>
                             </div>
 
-                            <div className="col-span-full">
+                            {/* <div className="col-span-full">
                                 <label htmlFor="photo" className="block text-md font-medium leading-6 text-gray-900">
                                     Photo
                                 </label>
@@ -62,7 +62,7 @@ export default function Settings() {
                                         Change
                                     </button>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

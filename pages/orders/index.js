@@ -39,16 +39,39 @@ const Orders = () => {
                     <th className="py-2 px-4">Price</th>
                   </tr>
                 </thead>
-                <tbody>
+                {/* <tbody>
                   {order.line_items &&
                     order.line_items.map((product) => (
                       <tr key={product.id}>
                         <td className="py-2 px-4">{product.price_data?.product_data?.name}</td>
                         <td className="py-2 px-4">{product.quantity}</td>
-                        <td className="py-2 px-4">${(product.price_data?.unit_amount / 100).toFixed(2)}</td>
+                        <td className="py-2 px-4">Rp{(product.price_data?.unit_amount / 100).toFixed(2)}</td>
                       </tr>
                     ))}
+                </tbody> */}
+                <tbody>
+                  {order.line_items &&
+                    order.line_items.map((product) => {
+                      
+                      const unitAmount = product.price_data?.unit_amount;
+                      const productName = product.price_data?.product_data?.name;
+                      const quantity = product.quantity;
+
+                      const priceDisplay =
+                        typeof unitAmount === 'number' && !isNaN(unitAmount)
+                          ? `Rp${(unitAmount / 100).toFixed(2)}`
+                          : 'Belum Melakukan Pembayaran';
+
+                      return (
+                        <tr key={product.id}>
+                          <td className="py-2 px-4">{productName || 'Unknown Product'}</td>
+                          <td className="py-2 px-4">{quantity || 0}</td>
+                          <td className="py-2 px-4">{priceDisplay}</td>
+                        </tr>
+                      );
+                    })}
                 </tbody>
+
               </table>
             </div>
           </div>

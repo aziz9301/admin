@@ -62,7 +62,7 @@ export default function Home() {
             </div>
           </header>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
-            <div className="h-32 rounded-lg bg-gray-200 flex items-center justify-center">
+            {/* <div className="h-32 rounded-lg bg-gray-200 flex items-center justify-center">
               <article className="flex max-md:flex-col items-end justify-between rounded-lg gap-4">
                 <div>
                   <p className="text-sm text-gray-500">Profit</p>
@@ -75,7 +75,7 @@ export default function Home() {
                   <span className="text-xs font-medium"> 67.81% </span>
                 </div>
               </article>
-            </div>
+            </div> */}
             <div className="h-32 rounded-lg bg-gray-200 flex items-center justify-center">
               <article className="flex max-md:flex-col items-end justify-between rounded-lg gap-4">
                 <div>

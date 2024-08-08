@@ -281,28 +281,24 @@ export default function Header() {
                         Satuan
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className={pathname === '/orders' ? active : inActive} href="/orders">
                         Orders
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link className={pathname === '/settings' ? active : inActive} href="/settings">
                         Settings
                       </Link>
                     </li>
-                    <li>
-                      <Link className={pathname === '/admin/manage-discounts' ? active : inActive} href="/admin/manage-discounts">
-                        Discounts
-                      </Link>
-                    </li>
+                    
                   </ul>
                 </nav>
 
                 <div className="flex items-center gap-4">
                   <div className="sm:flex sm:gap-4">
-                    <div className="w-10 h-10">
-                      <Image className="h-full w-full rounded-full object-contain object-center" src={session.user.image} alt={session.user.email} width={34} height={34} />
+                    <div className="w-10 h-6">
+                      {session.user.name || session.user.email}
                     </div>
                   </div>
 
@@ -347,21 +343,13 @@ export default function Header() {
                             Brand
                           </Link>
                         </li>
-                        <li>
-                          <Link onClick={toggleMobileNav} className={pathname === '/orders' ? active : inActive} href="/orders">
-                            Orders
-                          </Link>
-                        </li>
+                        
                         <li>
                           <Link onClick={toggleMobileNav} className={pathname === '/settings' ? active : inActive} href="/settings">
                             Settings
                           </Link>
                         </li>
-                        <li>
-                          <Link onClick={toggleMobileNav} className={pathname === '/admin/manage-discounts' ? active : inActive} href="/admin/manage-discounts">
-                            Discounts
-                          </Link>
-                        </li>
+                        
                       </ul>
                     </div>
                   )}
